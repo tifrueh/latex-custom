@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{titling}
+
+\usepackage[
+    a4paper,
+    margin=2cm
+]{geometry}
+
+\usepackage[
+    skip=10pt plus1pt,
+    indent=0pt
+]{parskip}
+
+\title{Title}
+\date{\today}
+\author{
+    Author\\ \texttt{\textless author@email.org\textgreater}
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[C]{\thetitle}
+\fancyhead[L,R]{\leftmark}
+\fancyfoot[C]{\thedate}
+\fancyfoot[R]{\thepage}
+
+
+
+\end{document}
