@@ -37,7 +37,19 @@
 \newlength{\sepwidth}
 \setlength{\sepwidth}{0.4pt}
 \setlength{\columnseprule}{\sepwidth}
-\newcommand{\secsep}{\rule{\columnwidth}{\sepwidth}}
+
+\newcommand{\secsep}{
+    \vspace{\baselineskip}
+    \leaders
+        \hrule width \columnwidth \relax
+    \vskip\sepwidth
+}
+
+\titleformat{\section}
+    {\secsep\Large\bfseries}
+    {\thesection}
+    {1em}
+    {}
 
 \newcommand{\key}[1]{\textit{\color{teal}{#1}}}
 
