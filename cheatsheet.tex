@@ -34,6 +34,11 @@
 
 \setlist{noitemsep, topsep=-\baselineskip, parsep=0pt, partopsep=0pt}
 
+\newlength{\sepwidth}
+\setlength{\sepwidth}{0.5pt}
+\setlength{\columnseprule}{\sepwidth}
+\newcommand{\sep}{\begin{center}\rule{\textwidth}{\sepwidth}\end{center}}
+
 \begin{document}
 
 \begin{multicols*}{3}
