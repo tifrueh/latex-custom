@@ -1,0 +1,26 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ccs}[2025-06-08 Custom computer science package]
+
+% Load packages.
+\RequirePackage{algpseudocodex}
+
+% Define custom algorithm environment (which uses a minipage and can therefore
+% also be used in multicols environments).
+\newlength{\algrulesep}
+\setlength{\algrulesep}{2pt}
+\newlength{\algrulewidth}
+\setlength{\algrulewidth}{0.4pt}
+\newcounter{algorithm}
+\newenvironment{minialgorithm}[2]{
+    \begin{minipage}{\columnwidth}
+    \refstepcounter{algorithm}
+    \hrule width \columnwidth height \algrulewidth
+    \vspace{\algrulesep}
+    \textbf{Algorithm \thealgorithm:} #1 \hfill #2
+    \vspace{\algrulesep}
+    \hrule width \columnwidth height \algrulewidth
+}{
+    \vspace{\algrulesep}
+    \hrule width \columnwidth height \algrulewidth
+    \end{minipage}
+}
