@@ -1,6 +1,6 @@
 % Provide identification.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ethzbasic}[2025-06-05 Basic article for ETHZ]
+\ProvidesClass{cartcl}[2025-06-08 Custom article document class]
 
 % Load base class and packages.
 \LoadClass{article}
