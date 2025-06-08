@@ -32,13 +32,10 @@
 \setlength{\columnseprule}{\sepwidth}
 
 \newcommand{\secsep}{
-    \ifnum\value{section}=1
-    \else
     \vspace{\baselineskip}
     \leaders
         \hrule width \columnwidth \relax
     \vskip\sepwidth
-    \fi
 }
 
 \titleformat{\section}
