@@ -1,0 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cmath}[2025-06-08 Custom math package]
+
+% Load AMS packages.
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+
+% Define custom commands.
+\renewcommand{\hat}{\widehat}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\defas}[1]{\stackrel{\text{def}}{#1}}
+\newcommand{\lImplies}{\mathbin{\rightarrow}}
+\newcommand{\lIff}{\mathbin{\leftrightarrow}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\rnorm}[1]{\lVert#1\rVert}
+\DeclareMathOperator{\gf}{GF}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\REF}{REF}
+\DeclareMathOperator{\RREF}{RREF}
+\DeclareMathOperator{\vecspan}{\mathbf{Span}}
+\DeclareMathOperator{\colsp}{\mathbf{C}}
+\DeclareMathOperator{\rowsp}{\mathbf{R}}
+\DeclareMathOperator{\nullsp}{\mathbf{N}}
+\DeclareMathOperator{\lnullsp}{\mathbf{LN}}
+\DeclareMathOperator{\solsp}{\mathbf{Sol}}
+\DeclareMathOperator{\rank}{\mathbf{rank}}
+\DeclareMathOperator{\tr}{\mathbf{Tr}}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator{\sgn}{sgn}
