@@ -14,7 +14,7 @@
 ]{geometry}
 
 % Set parskip options.
-\usepackage[
+\RequirePackage[
     skip=10pt plus1pt,
     indent=0pt
 ]{parskip}
