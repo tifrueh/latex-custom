@@ -1,6 +1,6 @@
 % Provide identification.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cheatsheet}[2025-06-08 Cheatsheet document class]
+\ProvidesClass{cchtsht}[2025-06-16 Custom cheatsheet document class]
 
 % Load base class and packages.
 \LoadClass[8pt]{extarticle}
