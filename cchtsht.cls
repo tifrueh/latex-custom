@@ -49,7 +49,7 @@
 
 % Configure equation spacing.
 \g@addto@macro \normalsize{
-    \setlength\abovedisplayskip{0pt}
+    \setlength\abovedisplayskip{-\baselineskip}
     \setlength\belowdisplayskip{0pt}
     \setlength\abovedisplayshortskip{-\baselineskip}
     \setlength\belowdisplayshortskip{0pt}
