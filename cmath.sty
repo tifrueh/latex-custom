@@ -31,3 +31,26 @@
 \DeclareMathOperator{\proj}{proj}
 \DeclareMathOperator*{\argmin}{argmin}
 \DeclareMathOperator{\sgn}{sgn}
+
+% More complex commands.
+\newcommand{\intvl}[3]{
+    \ifx#1o
+        \left]
+    \else
+        \if#1c
+            \left[
+        \else
+            \PackageError{cmath}{Left interval bound must be 'o'pen or 'c'losed}
+        \fi
+    \fi
+    #3
+    \if#2o
+        \right[
+    \else
+        \if#2c
+            \right]
+        \else
+            \PackageError{cmath}{Right interval bound must be 'o'pen or 'c'losed}
+        \fi
+    \fi
+}
