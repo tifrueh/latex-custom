@@ -7,6 +7,9 @@
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{breakable}
+\tcbuselibrary{skins}
 
 % Set page layout.
 \RequirePackage[
@@ -57,6 +60,23 @@
 
 % Define keyword command.
 \newcommand{\key}[1]{\textit{\color{teal}{#1}}}
+
+% Define box environment.
+\newtcolorbox{colbox}[2]{
+    blanker,
+    parbox=false,
+    breakable=true,
+    autoparskip,
+    title=#2,
+    attach title to upper,
+    after title={:\ },
+    colback=white,
+    coltitle=#1,
+    fonttitle=\bfseries,
+    sharp corners,
+    top=0mm, right=0mm, bottom=0mm, left=2mm,
+    borderline west={0.5mm}{0mm}{#1}
+}
 
 % Define cheatsheet environment (which is basically just multicols for now).
 \newenvironment{cheatsheet}[1][3]{
