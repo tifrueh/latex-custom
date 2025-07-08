@@ -48,7 +48,11 @@
     {}
 
 % Configure list spacing.
-\setlist{itemsep=0pt, topsep=\dimexpr-\parskip+\baselineskip-8pt\relax, parsep=0pt, partopsep=\parskip}
+\setlist{itemsep=0pt,
+    topsep=\dimexpr-\parskip+\baselineskip-8pt\relax plus \parskip,
+    parsep=0pt,
+    partopsep=\parskip
+}
 
 % Configure equation spacing.
 \g@addto@macro \normalsize{
