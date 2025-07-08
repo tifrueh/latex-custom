@@ -52,10 +52,10 @@
 
 % Configure equation spacing.
 \g@addto@macro \normalsize{
-    \setlength\abovedisplayskip{-\baselineskip}
-    \setlength\belowdisplayskip{0pt}
-    \setlength\abovedisplayshortskip{-\baselineskip}
-    \setlength\belowdisplayshortskip{0pt}
+    \setlength\abovedisplayskip{\dimexpr0.5\parskip+\baselineskip-8pt\relax plus 0.5\parskip}
+    \setlength\belowdisplayskip{\dimexpr0.5\parskip+\baselineskip-8pt\relax plus 0.5\parskip}
+    \setlength\abovedisplayshortskip{0pt plus \parskip}
+    \setlength\belowdisplayshortskip{\dimexpr0.5\parskip+\baselineskip-8pt\relax plus 0.5\parskip}
 }
 
 % Define keyword command.
