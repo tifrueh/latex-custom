@@ -69,7 +69,7 @@
 \newtcolorbox{colbox}[2]{
     blanker,
     parbox=false,
-    breakable=true,
+    breakable=false,
     autoparskip,
     title=#2,
     attach title to upper,
