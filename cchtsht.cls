@@ -3,7 +3,7 @@
 \ProvidesClass{cchtsht}[2025-06-16 Custom cheatsheet document class]
 
 % Load base class and packages.
-\LoadClass[8pt]{extarticle}
+\LoadClassWithOptions{extarticle}
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
