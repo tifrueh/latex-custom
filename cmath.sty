@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{cmath}[2025-06-08 Custom math package]
+\ProvidesPackage{cmath}[2026-06-17 Custom math package]
 
 % Load AMS packages.
 \RequirePackage{amsmath}
@@ -17,6 +17,13 @@
 \newcommand{\set}[2]{\left\{#1\;\middle\vert\;#2\right\}}
 \newcommand{\comp}{\mathbin{\circ}}
 \newcommand{\grad}{\nabla}
+\newcommand{\prob}[1]{\mathbb{P}{\left[#1\right]}}
+\newcommand{\cprob}[2]{\mathbb{P}{\left[#1\;\vert\;#2\right]}}
+\newcommand{\powset}[1]{\mathcal{P}{\left(#1\right)}}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\imaginaries}{\mathbb{C}}
 \DeclareMathOperator{\gf}{GF}
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\REF}{REF}
