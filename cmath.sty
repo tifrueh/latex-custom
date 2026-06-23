@@ -18,10 +18,13 @@
 \newcommand{\setb}[2]{\left\{#1\;\middle\vert\;#2\right\}}
 \newcommand{\comp}{\mathbin{\circ}}
 \newcommand{\grad}{\nabla}
-\newcommand{\prob}[1]{\mathbb{P}{\left[#1\right]}}
-\newcommand{\cprob}[2]{\mathbb{P}{\left[#1\;\vert\;#2\right]}}
-\newcommand{\expval}[1]{\mathbb{E}{\left[#1\right]}}
-\newcommand{\variance}[1]{\mathbb{V}{\left[#1\right]}}
+\newcommand{\prob}[2][]{\mathbb{P}\IfValueT{#1}{_{#1}}{\left[#2\right]}}
+\newcommand{\cprob}[3][]{\mathbb{P}\IfValueT{#1}{_{#1}}{\left[#2\;\vert\;#3\right]}}
+\newcommand{\expval}[2][]{\mathbb{E}\IfValueT{#1}{_{#1}}{\left[#2\right]}}
+\newcommand{\variance}[2][]{\mathbb{V}\IfValueT{#1}{_{#1}}{\left[#2\right]}}
+\newcommand{\mse}[2][]{\text{MSE}\IfValueT{#1}{_{#1}}{\left[#2\right]}}
+\newcommand{\distchisq}[1]{\chi^2_{#1}}
+\newcommand{\diststudentt}[1]{t_{#1}}
 \newcommand{\powset}[1]{\mathcal{P}{\left(#1\right)}}
 \newcommand{\naturals}{\mathbb{N}}
 \newcommand{\integers}{\mathbb{Z}}
@@ -40,7 +43,8 @@
 \DeclareMathOperator{\rank}{\mathbf{rank}}
 \DeclareMathOperator{\tr}{\mathbf{Tr}}
 \DeclareMathOperator{\proj}{proj}
-\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\divg}{div}
 \DeclareMathOperator{\curl}{curl}
