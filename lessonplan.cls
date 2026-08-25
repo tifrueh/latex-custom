@@ -100,3 +100,7 @@
     \end{tabularx}
     \endgroup
 }
+
+% Redefine the maketitle command to also set the pagestyle to empty.
+\NewCommandCopy{\@intmaketitle}{\maketitle}
+\renewcommand{\maketitle}{\@intmaketitle\thispagestyle{empty}}
