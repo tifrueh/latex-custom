@@ -7,8 +7,7 @@
 \RequirePackage{titling}
 \RequirePackage{fancyhdr}
 \RequirePackage{translator}
-\RequirePackage{longtable}
-\RequirePackage{ltablex}
+\RequirePackage{xltabular}
 \RequirePackage{environ}
 
 % Set page layout to A4.
@@ -90,14 +89,14 @@
     \begingroup
     \renewcommand{\arraystretch}{1.5}
     \newcommand\segment[3]{ {##1} & {##2} & {##3} \\ \hline}
-    \begin{tabularx}{\textwidth}{|l|X|X|}
+    \begin{xltabular}{\textwidth}{|l|X|X|}
         \hline
         \@hdrlabel{Time} &
         \@hdrlabel{Description} &
         \@hdrlabel{Methodical Notes} \\
         \hline
         \BODY
-    \end{tabularx}
+    \end{xltabular}
     \endgroup
 }
 
