@@ -8,6 +8,8 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{translator}
 \RequirePackage{longtable}
+\RequirePackage{ltablex}
+\RequirePackage{environ}
 
 % Set page layout to A4.
 \RequirePackage[
@@ -89,23 +91,18 @@
 }
 
 % Declare main environment.
-\newenvironment{plan}[1][\translate{Plan}]{
+\NewEnviron{plan}[1][\translate{Plan}]{
     \section{#1}
     \begingroup
     \renewcommand{\arraystretch}{1.5}
-    \newcommand\segment[3]{
-        {##1} & {##2} & {##3} \\
-    }
-    \begin{center}
-        \begin{longtable}{|p{0.2\textwidth}|p{0.4\textwidth}|p{0.4\textwidth}|}
-            \hline
-            \@hdrlabel{Time} &
-            \@hdrlabel{Description} &
-            \@hdrlabel{Methodical Notes} \\
-            \hline
-}{
-            \hline
-        \end{longtable}
-    \end{center}
+    \newcommand\segment[3]{ {##1} & {##2} & {##3} \\ \hline}
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+        \hline
+        \@hdrlabel{Time} &
+        \@hdrlabel{Description} &
+        \@hdrlabel{Methodical Notes} \\
+        \hline
+        \BODY
+    \end{tabularx}
     \endgroup
 }
