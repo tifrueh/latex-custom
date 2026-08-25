@@ -61,32 +61,26 @@
 \newcommand\makeheader{
     \begingroup
     \renewcommand{\arraystretch}{1.5}
-    \begin{center}
-        \begin{tabular}{
-                | p{0.25\textwidth}
-                | p{0.25\textwidth}
-                | p{0.25\textwidth}
-                | p{0.25\textwidth} | }
-            \hline
-            \multicolumn{3}{|p{0.75\textwidth}|}
-            {\@hdrlabel{Topic:}\par \@topic}
-            &
-            \@hdrlabel{Duration:}\par \@duration
-            \\
-            \hline
-            \multicolumn{4}{|p{1.0\textwidth}|}
-            {\@hdrlabel{Goals:}\par \@goals}
-            \\
-            \hline
-            \multicolumn{2}{|p{0.5\textwidth}|}
-            {\@hdrlabel{Participants:}\par \@participants}
-            &
-            \multicolumn{2}{|p{0.5\textwidth}|}
-            {\@hdrlabel{Material:}\par \@material}
-            \\
-            \hline
-        \end{tabular}
-    \end{center}
+    \begin{tabularx}{\textwidth}{|X|X|X|X|}
+        \hline
+        \multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}
+        {\@hdrlabel{Topic:}\par \@topic}
+        &
+        \@hdrlabel{Duration:}\par \@duration
+        \\
+        \hline
+        \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}
+        {\@hdrlabel{Goals:}\par \@goals}
+        \\
+        \hline
+        \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}
+        {\@hdrlabel{Participants:}\par \@participants}
+        &
+        \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}
+        {\@hdrlabel{Material:}\par \@material}
+        \\
+        \hline
+    \end{tabularx}
     \endgroup
 }
 
