@@ -7,6 +7,7 @@
 \RequirePackage{titling}
 \RequirePackage{fancyhdr}
 \RequirePackage{translator}
+\RequirePackage{longtable}
 
 % Set page layout to A4.
 \RequirePackage[
@@ -45,6 +46,10 @@
 \newtranslation[to = German]{Goals:}{Lernziele:}
 \newtranslation[to = German]{Participants:}{Teilnehmende:}
 \newtranslation[to = German]{Material:}{Material:}
+\newtranslation[to = German]{Time}{Zeit}
+\newtranslation[to = German]{Description}{Ablauf}
+\newtranslation[to = German]{Methodical Notes}{Methodische Notizen}
+\newtranslation[to = German]{Plan}{Plan}
 
 % Define font to use for header labels (and the fact that we want to localise
 % them).
@@ -79,6 +84,28 @@
             \\
             \hline
         \end{tabular}
+    \end{center}
+    \endgroup
+}
+
+% Declare main environment.
+\newenvironment{plan}[1][\translate{Plan}]{
+    \section{#1}
+    \begingroup
+    \renewcommand{\arraystretch}{1.5}
+    \newcommand\segment[3]{
+        {##1} & {##2} & {##3} \\
+    }
+    \begin{center}
+        \begin{longtable}{|p{0.2\textwidth}|p{0.4\textwidth}|p{0.4\textwidth}|}
+            \hline
+            \@hdrlabel{Time} &
+            \@hdrlabel{Description} &
+            \@hdrlabel{Methodical Notes} \\
+            \hline
+}{
+            \hline
+        \end{longtable}
     \end{center}
     \endgroup
 }
